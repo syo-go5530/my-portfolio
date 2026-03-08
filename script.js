@@ -5,7 +5,7 @@ const GITHUB_USERNAME = 'syo-go5530';
 
 // リポジトリを追加する場合はここに追記してください
 const REPOSITORIES = [
-  { repo: 'nginx-docker-portfolio' },
+  { repo: 'my-portfolio' },
   // 例: { repo: 'next-repo-name' },
   // 例: { repo: 'another-repo' },
 ];
