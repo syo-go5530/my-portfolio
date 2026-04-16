@@ -7,7 +7,8 @@ const GITHUB_USERNAME = 'syo-go5530';
 const REPOSITORIES = [
   { repo: 'my-portfolio' },
   { repo: 'nginx-docker-portfolio' },
-  // 例: { repo: 'next-repo-name' },
+  { repo: 'aws-vpc-ec2-ssh' },
+
   // 例: { repo: 'another-repo' },
 ];
 
