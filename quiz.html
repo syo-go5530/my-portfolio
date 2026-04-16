@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>インフラエンジニア 思考力クイズ</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+
+<div id="particles"></div>
+
+<!-- ===== スタート画面 ===== -->
+<div id="screen-start" class="screen active">
+  <div class="start-card">
+    <div class="terminal-bar">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span class="terminal-label">quiz.sh</span>
+    </div>
+    <div class="start-body">
+      <div class="start-icon">⚙️</div>
+      <h1 class="start-title">インフラエンジニア<br>思考力クイズ</h1>
+      <p class="start-sub">初心者からプロレベルまで — 全 110 問</p>
+
+      <div class="level-grid">
+        <button class="level-btn" data-mode="all">
+          <span class="level-badge badge-all">ALL</span>
+          <span class="level-name">全レベル混合</span>
+          <span class="level-count">110 問</span>
+        </button>
+        <button class="level-btn" data-mode="beginner">
+          <span class="level-badge badge-beginner">初級</span>
+          <span class="level-name">ネットワーク・Linux 基礎</span>
+          <span class="level-count">30 問</span>
+        </button>
+        <button class="level-btn" data-mode="intermediate">
+          <span class="level-badge badge-intermediate">中級</span>
+          <span class="level-name">Webサーバー・コンテナ・クラウド</span>
+          <span class="level-count">35 問</span>
+        </button>
+        <button class="level-btn" data-mode="advanced">
+          <span class="level-badge badge-advanced">上級</span>
+          <span class="level-name">Kubernetes・IaC・監視</span>
+          <span class="level-count">25 問</span>
+        </button>
+        <button class="level-btn" data-mode="pro">
+          <span class="level-badge badge-pro">プロ</span>
+          <span class="level-name">アーキテクチャ・SRE</span>
+          <span class="level-count">20 問</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== クイズ画面 ===== -->
+<div id="screen-quiz" class="screen">
+  <div class="quiz-wrap">
+    <!-- ヘッダー -->
+    <div class="quiz-header">
+      <div class="quiz-meta">
+        <span id="qCategory" class="q-category"></span>
+        <span id="qLevel" class="q-level"></span>
+      </div>
+      <div class="quiz-progress-wrap">
+        <span id="qProgress" class="q-progress"></span>
+        <div class="progress-bar-bg">
+          <div id="progressBar" class="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 問題 -->
+    <div class="question-card">
+      <p id="questionText" class="question-text"></p>
+      <div id="options" class="options-grid"></div>
+    </div>
+
+    <!-- 解説 -->
+    <div id="explanationBox" class="explanation-box hidden">
+      <div class="explanation-header">
+        <span id="resultIcon" class="result-icon"></span>
+        <span id="resultText" class="result-text"></span>
+      </div>
+      <p id="explanationText" class="explanation-text"></p>
+      <button id="btnNext" class="btn-next">次の問題 →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 結果画面 ===== -->
+<div id="screen-result" class="screen">
+  <div class="result-card">
+    <div class="terminal-bar">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span class="terminal-label">result.sh</span>
+    </div>
+    <div class="result-body">
+      <div id="resultEmoji" class="result-emoji"></div>
+      <h2 id="resultTitle" class="result-title"></h2>
+      <div id="scoreDisplay" class="score-display"></div>
+      <p id="resultMessage" class="result-message"></p>
+
+      <div id="levelBreakdown" class="level-breakdown"></div>
+
+      <div class="result-actions">
+        <button id="btnReview" class="btn-review">間違えた問題を確認</button>
+        <button id="btnRestart" class="btn-restart">もう一度挑戦</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 復習画面 ===== -->
+<div id="screen-review" class="screen">
+  <div class="review-wrap">
+    <div class="review-header">
+      <h2 class="review-title">間違えた問題の復習</h2>
+      <button id="btnBackResult" class="btn-back">← 結果に戻る</button>
+    </div>
+    <div id="reviewList" class="review-list"></div>
+  </div>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
