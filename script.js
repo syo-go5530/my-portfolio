@@ -106,7 +106,7 @@ async function renderCards() {
       .then(({ md, repoUrl }) => {
         cache[i] = { md, repoUrl, repo };
         const el = document.getElementById(`preview-${i}`);
-        if (el) el.innerHTML = marked.parse(md);
+        if (el) el.innerHTML = DOMPurify.sanitize(marked.parse(md));
       })
       .catch(() => {
         const el = document.getElementById(`preview-${i}`);
