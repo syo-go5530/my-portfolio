@@ -10,7 +10,8 @@ const REPOSITORIES = [
   { repo: 'aws-vpc-ec2-ssh' },
   { repo: 'monitoring-portfolio' },
   { repo: 'terraform-vpc-ec2-v2' },
-
+  { repo: 'zabbix-monitoring' },
+  
   // 例: { repo: 'another-repo' },
 ];
 
