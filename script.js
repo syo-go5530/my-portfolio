@@ -12,7 +12,8 @@ const REPOSITORIES = [
   { repo: 'terraform-vpc-ec2-v2' },
   { repo: 'zabbix-monitoring' },
   { repo: 'zabbix-escalation-maintenance' },
-  { repo: 'zabbix-escalation-maintenance' },
+  { repo: 'zabbix-web-scenario' },
+  { repo: 'zabbix-dashboard' },
   // 例: { repo: 'another-repo' },
 ];
 
